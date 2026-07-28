@@ -17,6 +17,7 @@
 
 *{box-sizing:border-box;margin:0;padding:0;}
 .wa-icon{width:18px;height:18px;flex-shrink:0;}
+.mail-icon{width:18px;height:18px;flex-shrink:0;}
 html{scroll-behavior:smooth;}
 body{
   font-family:'Mukta','Poppins',sans-serif;
@@ -119,8 +120,8 @@ body.is-loading{overflow:hidden;}
 .brand-text{display:flex;flex-direction:column;line-height:1.15;}
 .brand-text strong{font-family:'Poppins',sans-serif;font-size:1.15rem;color:var(--navy);letter-spacing:.02em;}
 .brand-text small{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:600;}
-.nav-links{display:flex;gap:28px;align-items:center;}
-.nav-links a{font-size:.92rem;font-weight:600;color:var(--navy);opacity:.75;transition:opacity .2s;position:relative;}
+.nav-links{display:flex;gap:22px;align-items:center;flex-wrap:nowrap;}
+.nav-links a{font-size:.9rem;font-weight:600;color:var(--navy);opacity:.75;transition:opacity .2s;position:relative;white-space:nowrap;}
 .nav-links a:hover,.nav-links a.active{opacity:1;color:var(--saffron);}
 .nav-cta{display:flex;align-items:center;gap:10px;}
 .nav-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;}
@@ -289,6 +290,7 @@ body.is-loading{overflow:hidden;}
 .contact-card:hover{background:rgba(255,255,255,.09);transform:translateY(-6px);border-color:var(--gold);}
 .contact-icon{font-size:1.8rem;display:block;margin-bottom:14px;}
 .contact-icon .wa-icon{width:1.8rem;height:1.8rem;color:#25D366;}
+.contact-icon .mail-icon{width:1.8rem;height:1.8rem;color:var(--gold);}
 .contact-card h3{font-size:1.05rem;margin-bottom:6px;}
 .contact-card p{color:rgba(255,255,255,.72);font-size:.9rem;word-break:break-word;}
 
@@ -301,7 +303,16 @@ body.is-loading{overflow:hidden;}
 .footer h4{color:#fff;font-size:.95rem;margin-bottom:16px;letter-spacing:.03em;}
 .footer-grid > div > a{display:block;padding:6px 0;font-size:.9rem;color:rgba(255,255,255,.62);transition:color .2s;}
 .footer-grid > div > a:hover{color:var(--gold);}
-.footer-bottom{text-align:center;padding:22px 0;font-size:.85rem;color:rgba(255,255,255,.45);}
+.footer-bottom{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  padding:22px 0;font-size:.85rem;color:rgba(255,255,255,.45);
+}
+.footer-credit{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.85rem;color:rgba(255,255,255,.45);transition:color .2s ease;
+}
+.footer-credit:hover{color:rgba(255,255,255,.75);}
+.lcd-logo{height:11px;width:auto;color:inherit;}
 
 /* ===== Floating buttons ===== */
 .wa-float{
@@ -325,7 +336,7 @@ body.is-loading{overflow:hidden;}
 .reveal.in{opacity:1;transform:translateY(0);}
 
 /* ===== Responsive ===== */
-@media (max-width:980px){
+@media (max-width:1100px){
   .nav-links{position:fixed;top:88px;left:16px;right:16px;flex-direction:column;
     background:#fff;border-radius:20px;padding:20px;box-shadow:var(--shadow);
     gap:6px;align-items:stretch;text-align:center;
