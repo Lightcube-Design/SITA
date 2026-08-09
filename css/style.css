@@ -77,7 +77,10 @@ body.is-loading{overflow:hidden;}
   border-top-color:var(--saffron);border-right-color:var(--gold);
   animation:spin 1.1s linear infinite;
 }
-.preloader-mark{font-size:2.4rem;animation:markPulse 1.6s ease-in-out infinite;}
+.preloader-mark{
+  width:66px;height:66px;border-radius:50%;object-fit:cover;
+  animation:markPulse 1.6s ease-in-out infinite;
+}
 @keyframes spin{to{transform:rotate(360deg);}}
 @keyframes markPulse{0%,100%{transform:scale(1);}50%{transform:scale(1.12);}}
 .preloader-brand{text-align:center;}
@@ -116,7 +119,7 @@ body.is-loading{overflow:hidden;}
   border-radius:100px;box-shadow:0 10px 40px -15px rgba(11,31,61,.2);
 }
 .brand{display:flex;align-items:center;gap:10px;}
-.brand-mark{font-size:1.7rem;}
+.brand-mark{width:38px;height:38px;border-radius:50%;object-fit:cover;flex-shrink:0;}
 .brand-text{display:flex;flex-direction:column;line-height:1.15;}
 .brand-text strong{font-family:'Poppins',sans-serif;font-size:1.15rem;color:var(--navy);letter-spacing:.02em;}
 .brand-text small{font-size:.62rem;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;font-weight:600;}
